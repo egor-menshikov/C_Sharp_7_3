@@ -1,7 +1,7 @@
 ﻿// Задача 29: Напишите программу, которая задаёт массив
 //  из N случайных элементов и выводит их на экран.
 
-
+// Генерация
 int[] RandArr()
 {
     Console.Write("Enter array length: ");
@@ -19,4 +19,19 @@ int[] RandArr()
     return arr;
 }
 
-Console.WriteLine("[{0}]", string.Join(", ", RandArr()));
+// Вывод
+void PrintArr(int[] arr)
+{
+    Console.WriteLine();
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+        
+    }
+    Console.WriteLine();
+    // Console.WriteLine("[{0}]", string.Join(", ", arr));
+}
+
+// Вызов методов
+int[] array = RandArr();
+PrintArr(array);
