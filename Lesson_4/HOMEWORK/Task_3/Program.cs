@@ -20,6 +20,24 @@ int[] RandArr()
     return arr;
 }
 
+// Вывод
+void PrintArr(int[] arr)
+{
+    Console.WriteLine(String.Empty);
+    for (int i = 0; i < arr.Length; i++)
+    {
+        Console.Write($"{arr[i]} ");
+        
+    }
+    Console.WriteLine(String.Empty);
+    Console.WriteLine(String.Empty);
+}
+
+// Вызов методов
+int[] array = RandArr();
+PrintArr(array);
+
+
 // Генерация с аргументами снаружи
 
 // Console.Write("Enter array length: ");
@@ -38,20 +56,3 @@ int[] RandArr()
 //     }
 //     return arr;
 // }
-
-// Вывод
-void PrintArr(int[] arr)
-{
-    Console.WriteLine();
-    for (int i = 0; i < arr.Length; i++)
-    {
-        Console.Write($"{arr[i]} ");
-        
-    }
-    Console.WriteLine();
-    // Console.WriteLine("[{0}]", string.Join(", ", arr));
-}
-
-// Вызов методов
-int[] array = RandArr();
-PrintArr(array);
