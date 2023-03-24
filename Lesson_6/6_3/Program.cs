@@ -7,7 +7,7 @@ void Fibo(int n)
     int b = 1;
     for (int i = 0; i < n; i++)
     {
-        Console.Write($" {a}");
+        Console.WriteLine($"{i}  {a}");
         (a, b) = (b, a + b);
     }
 }
