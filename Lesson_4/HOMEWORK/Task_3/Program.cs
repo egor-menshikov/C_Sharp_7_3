@@ -68,7 +68,6 @@ void PrintArr(double[] arr)
     Console.WriteLine();
 }
 
-
 // Генерируем 2d массив
 int[,] RandArr2D()
 {
