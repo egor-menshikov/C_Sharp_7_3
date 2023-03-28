@@ -75,7 +75,7 @@ int[,] RandArr2D()
     Console.WriteLine();
     Console.WriteLine("Generating a 2d array..");
     Console.Write("Enter array rows number: ");
-    int row = int.Parse(Console.ReadLine()!);
+    int line = int.Parse(Console.ReadLine()!);
     Console.Write("Enter array columns number: ");
     int col = int.Parse(Console.ReadLine()!);
     Console.Write("Enter minimal range value: ");
@@ -83,10 +83,10 @@ int[,] RandArr2D()
     Console.Write("Enter maximum range value: ");
     int max = int.Parse(Console.ReadLine()!);
 
-    int[,] arr = new int[row, col];
+    int[,] arr = new int[line, col];
     Random rand = new Random();
 
-    for (int i = 0; i < row; i++)
+    for (int i = 0; i < line; i++)
     {
         for (int j = 0; j < col; j++)
         {
@@ -99,11 +99,11 @@ int[,] RandArr2D()
 // Вывод 2d массива
 void PrintArr2D(int[,] arr)
 {    
-    for (int row = 0; row < arr.GetLength(0); row++)
+    for (int line = 0; line < arr.GetLength(0); line++)
     {
         for (int col = 0; col < arr.GetLength(1); col++)
         {
-            Console.Write($"{arr[row, col]} ");
+            Console.Write($"{arr[line, col]} ");
         }
         Console.WriteLine();
     }
