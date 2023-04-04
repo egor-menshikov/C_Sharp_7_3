@@ -31,15 +31,39 @@ int[,] RandArr2D()
 
 // Вывод 2d массива
 void PrintArr2D(int[,] arr)
-{    
+{
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Console.Write($"{arr[i, j]} ");
+            Console.Write($"{arr[i, j],4} ");
         }
         Console.WriteLine();
     }
     Console.WriteLine();
 }
 
+// Сортировка
+void SortArr(int[,] arr)
+{
+    for (int i = 0; i < arr.GetLength(0); i++)
+    {
+        for (int j = 0; j < arr.GetLength(1); j++)
+        {
+            for (int k = 0; k < arr.GetLength(1) - j - 1; k++)
+            {
+                if (arr[i, k] < arr[i, k + 1])
+                {
+                    (arr[i, k], arr[i, k + 1]) = (arr[i, k + 1], arr[i, k]);
+                }
+            }
+        }
+    }
+}
+
+// Выполняем
+int[,] array = RandArr2D();
+Console.WriteLine();
+PrintArr2D(array);
+SortArr(array);
+PrintArr2D(array);
