@@ -98,11 +98,11 @@ int[,] RandArr2D()
 // Вывод 2d массива
 void PrintArr2D(int[,] arr)
 {    
-    for (int line = 0; line < arr.GetLength(0); line++)
+    for (int i = 0; i < arr.GetLength(0); i++)
     {
-        for (int col = 0; col < arr.GetLength(1); col++)
+        for (int j = 0; j < arr.GetLength(1); j++)
         {
-            Console.Write($"{arr[line, col]} ");
+            Console.Write($"{arr[i, j]} ");
         }
         Console.WriteLine();
     }
